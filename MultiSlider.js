@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, Animated } from 'react-native';
 
 import {
   StyleSheet,
@@ -584,7 +584,7 @@ export default class MultiSlider extends React.Component {
               positionOne > sliderLength / 2 && styles.topMarkerContainer,
             ]}
           >
-            <View
+            <Animated.View
               style={[styles.touch, touchStyle]}
               ref={component => (this._markerOne = component)}
               {...this._panResponderOne.panHandlers}
@@ -612,7 +612,7 @@ export default class MultiSlider extends React.Component {
                   valueSuffix={this.props.valueSuffix}
                 />
               )}
-            </View>
+            </Animated.View>
           </View>
           {twoMarkers && positionOne !== this.props.sliderLength && (
             <View
@@ -622,7 +622,7 @@ export default class MultiSlider extends React.Component {
                 this.props.markerContainerStyle,
               ]}
             >
-              <View
+              <Animated.View
                 style={[styles.touch, touchStyle]}
                 ref={component => (this._markerTwo = component)}
                 {...this._panResponderTwo.panHandlers}
@@ -650,7 +650,7 @@ export default class MultiSlider extends React.Component {
                     valueSuffix={this.props.valueSuffix}
                   />
                 )}
-              </View>
+              </Animated.View>
             </View>
           )}
         </View>
@@ -712,6 +712,14 @@ const styles = StyleSheet.create({
         borderRadius: 2,
         backgroundColor: '#A7A7A7',
       },
+      harmony: {
+        height: 2,
+        backgroundColor: '#CECECE',        
+      },
+      default: {
+        height: 2,
+        backgroundColor: '#CECECE',
+      }
     }),
   },
   selectedTrack: {
@@ -725,6 +733,12 @@ const styles = StyleSheet.create({
       web: {
         backgroundColor: '#095FFF',
       },
+      harmony: {
+        backgroundColor: '#0D8675',        
+      },      
+      default: {
+        backgroundColor: '#0D8675',
+      }
     }),
   },
   markerContainer: {
