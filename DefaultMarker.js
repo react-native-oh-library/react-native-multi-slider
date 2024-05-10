@@ -65,6 +65,18 @@ const styles = StyleSheet.create({
         shadowRadius: 1,
         shadowOpacity: 0.2,
       },
+      harmony: {
+        height: 12,
+        width: 12,
+        borderRadius: 12,
+        backgroundColor: '#0D8675',        
+      },      
+      default: {
+        height: 12,
+        width: 12,
+        borderRadius: 12,
+        backgroundColor: '#0D8675',
+      }
     }),
   },
   pressedMarkerStyle: {
@@ -76,6 +88,16 @@ const styles = StyleSheet.create({
         width: 20,
         borderRadius: 20,
       },
+      harmony: {
+        height: 20,
+        width: 20,
+        borderRadius: 20,        
+      },
+      default: {
+        height: 20,
+        width: 20,
+        borderRadius: 20,
+      }
     }),
   },
   disabled: {
